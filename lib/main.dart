@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(),
         body: _buildBody(),
-        bottomNavigationBar: _buildFooter(),
+        bottomNavigationBar: _footer(),
       ),
     );
   }
@@ -30,11 +30,11 @@ class MyApp extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  _buildHeader(),
+                  _header(),
                   SizedBox(height: 25),
-                  _buildWeatherDescription(),
+                  _weatherDescription(),
                   SizedBox(height: 20),
-                  _buildTemperatureForecast(),
+                  _temperatureForecast(),
                   SizedBox(height: 45),
                 ],
               ),
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Widget _buildWeatherDescription() {
+  Widget _weatherDescription() {
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[100], // Change color here
@@ -89,7 +89,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Widget _buildHeader() {
+  Widget _header() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -109,7 +109,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Widget _buildTemperatureForecast() {
+  Widget _temperatureForecast() {
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[200], // Change color here
@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Widget _buildFooter() {
+  Widget _footer() {
     return BottomNavigationBar(
       selectedItemColor: Colors.blue, // Change color here
       selectedLabelStyle: TextStyle(

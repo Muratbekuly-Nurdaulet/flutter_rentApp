@@ -48,8 +48,8 @@ class MyApp extends StatelessWidget {
   Widget _buildWeatherDescription() {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(10), // Adjust the value as needed
+        color: Colors.blue[100], // Change color here
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         children: [
@@ -57,11 +57,11 @@ class MyApp extends StatelessWidget {
             padding: const EdgeInsets.all(18),
             child: Row(
               children: [
-                Icon(Icons.public, color: Colors.blue.shade600, size: 30,),
-                SizedBox(width: 10), // Add some space between the icon and text
+                Icon(Icons.public, color: Colors.blue, size: 30,),
+                SizedBox(width: 10),
                 Text(
                   "Где арендовать",
-                  style: TextStyle(color: Colors.blue[900],
+                  style: TextStyle(color: Colors.white, // Change color here
                       fontWeight: FontWeight.w600,
                       fontSize: 17),
                 ),
@@ -73,11 +73,11 @@ class MyApp extends StatelessWidget {
             padding: const EdgeInsets.all(18),
             child: Row(
               children: [
-                Icon(Icons.hourglass_empty, color: Colors.blue.shade600, size: 30,),
-                SizedBox(width: 10), // Add some space between the icon and text
+                Icon(Icons.hourglass_empty, color: Colors.blue, size: 30,),
+                SizedBox(width: 10),
                 Text(
                   "Когда",
-                  style: TextStyle(color: Colors.blue[700],
+                  style: TextStyle(color: Colors.white, // Change color here
                       fontWeight: FontWeight.w600,
                       fontSize: 17),
                 ),
@@ -98,7 +98,7 @@ class MyApp extends StatelessWidget {
             Text(
               'Посуточная аренда недвижимости',
               style: TextStyle(
-                color: Colors.blue[1000],
+                color: Colors.blue[900], // Change color here
                 fontSize: 35,
                 fontWeight: FontWeight.w900,
               ),
@@ -112,8 +112,8 @@ class MyApp extends StatelessWidget {
   Widget _buildTemperatureForecast() {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(10), // Adjust the value as needed
+        color: Colors.blue[200], // Change color here
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(
         padding: const EdgeInsets.all(19),
@@ -126,21 +126,12 @@ class MyApp extends StatelessWidget {
                 children: [
                   Icon(Icons.house_sharp, color: Colors.blue[700], size: 50,),
                   SizedBox(height: 10),
-                  // Add some space between the icon and text
                   Text(
                     "Мои заселения",
                     style: TextStyle(
-                      color: Colors.blue[700],
+                      color: Colors.white, // Change color here
                       fontWeight: FontWeight.w800,
                       fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    "Предстоящие и предыдущие заселения",
-                    style: TextStyle(
-                      color: Colors.blue[700],
-                      fontWeight: FontWeight.w600,
-                      fontSize: 17,
                     ),
                   ),
                 ],
@@ -154,14 +145,13 @@ class MyApp extends StatelessWidget {
 
   Widget _buildFooter() {
     return BottomNavigationBar(
-      selectedItemColor: Colors.blue.shade800,
+      selectedItemColor: Colors.blue, // Change color here
       selectedLabelStyle: TextStyle(
-          color: Colors.blue, fontWeight: FontWeight.w500
-      ),
+          color: Colors.blue, fontWeight: FontWeight.w600),
       items: [
         BottomNavigationBarItem(
           icon: IconButton(
-            icon: Icon(Icons.key_rounded, color: Colors.blue.shade300),
+            icon: Icon(Icons.key, color: Colors.blue),
             onPressed: () {
               // Action for 'Снять' button
             },
@@ -170,7 +160,7 @@ class MyApp extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: IconButton(
-            icon: Icon(Icons.airplane_ticket_outlined, color: Colors.grey),
+            icon: Icon(Icons.airplane_ticket, color: Colors.grey),
             onPressed: () {
               // Action for 'Сдать' button
             },
@@ -190,5 +180,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 
 
